@@ -1,10 +1,13 @@
+import Link from "next/link";
 import React from "react";
 import tw from "tailwind-styled-components";
 
 const Search = () => {
   return (
     <Wrapper>
-      <ButtonContainer>Go Back</ButtonContainer>
+      <Link href="/" passHref>
+        <ButtonContainer>Go Back</ButtonContainer>
+      </Link>
       <InputContainer>
         <FromToIcons>
           <Circle />
@@ -54,7 +57,7 @@ const SavedPlaces = tw.div`
 text-2xl bg-white px-4 py-2 text-center my-2
 `;
 const ConfirmedLocation = tw.div`
-bg-black text-white text-center p-3 text-xl mx-2
+bg-black text-white text-center p-3 text-xl mx-2 mt-4
 `;
 
 export default Search;
