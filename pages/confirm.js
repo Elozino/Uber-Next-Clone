@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import tw from "tailwind-styled-components";
@@ -49,6 +50,11 @@ const Confirm = () => {
 
   return (
     <Wrapper>
+      <GoBack>
+        <Link href="/search" passHref>
+          Go Back
+        </Link>
+      </GoBack>
       <Map
         pickupCoordinates={pickupCoordinates}
         dropOffCoordinates={dropOffCoordinates}
@@ -63,6 +69,9 @@ const Confirm = () => {
 
 const Wrapper = tw.div`
 flex flex-col h-screen
+`;
+const GoBack = tw.div`
+
 `;
 const RideContainer = tw.div`
 flex-1 flex flex-col h-1/2
