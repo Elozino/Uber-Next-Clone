@@ -27,7 +27,6 @@ const Confirm = () => {
       });
   };
   const getDropOffCoordinates = async (dropoff) => {
-    const dropOff = ["Los Angeles"];
     await fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${dropoff}.json?` +
         new URLSearchParams({
@@ -44,8 +43,8 @@ const Confirm = () => {
   };
 
   useEffect(() => {
-    // getPickupCoordinates(pickup);
-    // getDropOffCoordinates(dropoff)
+    getPickupCoordinates(pickup);
+    getDropOffCoordinates(dropoff)
   }, [pickup, dropoff]);
 
   return (

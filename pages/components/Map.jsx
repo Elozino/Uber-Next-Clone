@@ -35,15 +35,10 @@ const Map = ({ pickupCoordinates, dropOffCoordinates }) => {
 
   const addToMAp = (map, coordinates) => {
     const marker1 = new mapboxgl.Marker()
-      .setLngLat(coordinates || [12.554729, 55.78513])
+      .setLngLat(coordinates)
       .addTo(map)
 
-  }   
-
-  useEffect(() => {
-
-
-  }, [])
+  } 
   return (
     <Wrapper id="map"></Wrapper>
   )
